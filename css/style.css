@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#genHackContainer {
+  color: rgb(0, 255, 0);
+  background-color: rgba(0, 0, 0, 0.533);
+  border: 5px solid rgb(0, 255, 0);
+  border-radius: 10px;
+  padding: 50px;
+  margin: 0 10px 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.video-wrapper {
+  /* Telling our absolute positioned video to 
+  be relative to this element */
+  position: relative;
+
+  width: 300px;
+  height: 700px;
+
+  /* Will not allow the video to overflow the 
+  container */
+  overflow: hidden;
+
+  /* Centering the container's content vertically 
+  and horizontally */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+video {
+  /** Simulationg background-size: cover */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .video-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #genHackContainer {
+    padding: 10px;
+    margin: 0 5px 0 5px;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #genHackContainer {
+    /* padding: 10px; */
+    /* margin: 0 5px 0 5px; */
+    font-weight: bolder;
+    font-size: 15px;
+    line-height: 1.2;
+  }
+}
